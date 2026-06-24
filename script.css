@@ -17,13 +17,14 @@ body {
     background-image: var(--background-image);
     background-size: cover;
     height: 100vh;
+    overflow: hidden;
 }
 
 .window {
     border: solid 1px black; 
     border-radius: var(--window-border-radius);
     position: absolute;
-    width: fit-content;
+    width: 50rem;
     background-color: var(--window-handler-color);
 }
 

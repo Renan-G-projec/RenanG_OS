@@ -66,6 +66,9 @@ function dragElement(element) {
         initialX = e.clientX;
         initialY = e.clientY;
 
+        // Does not allow the user from tooking the handler above the page and losing it
+        if (initialY < 0) currentY = 0;
+
         element.style.top = (element.offsetTop - currentY) + "px";
         element.style.left = (element.offsetLeft - currentX) + "px";
     }
