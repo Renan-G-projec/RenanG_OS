@@ -24,6 +24,8 @@ body {
     border: solid 1px black; 
     border-radius: var(--window-border-radius);
     position: absolute;
+    display: flex;
+    flex-direction: column;
     width: 50rem;
     background-color: var(--window-handler-color);
 }
@@ -32,10 +34,29 @@ body {
     backdrop-filter: blur(10px);
     position: relative;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
     border-radius: var(--window-border-radius) var(--window-border-radius) 0 0;
 }
+
+.window-name {
+    margin-left: 1rem;
+}
+
+.window-close-btn {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 1rem;
+    border-radius: 50%;
+    background-color: red;
+    cursor: pointer;
+}
+
+.window-close-btn:hover {
+    background-color: brown;
+}
+
 
 .grab {
     cursor: grab;

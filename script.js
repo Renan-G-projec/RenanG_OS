@@ -81,4 +81,24 @@ function dragElement(element) {
     }
 }
 
-dragElement(document.getElementById("window-welcome"));
+function openWindow(element) {
+    element.style.display = "flex";
+}
+
+function closeWindow(element) {
+    element.style.display = "none";
+}
+
+function makeWindow(id, launcherId) {
+    const window = document.getElementById(id);
+    dragElement(window);
+    const button = document.getElementById(id + `-close-btn`);
+    button.addEventListener('click', () => {closeWindow(window)})
+
+    if (!launcherId) return;
+    const launcher = document.getElementById(launcherId);
+
+    launcher.addEventListener('click', () => {openWindow(window)});
+}
+
+makeWindow("window-welcome")
