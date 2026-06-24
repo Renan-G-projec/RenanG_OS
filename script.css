@@ -1,0 +1,61 @@
+/* Ad Maiorem Dei Gloriam! */
+
+:root {
+    --background-image: url(./assets/default-bg.jpg);
+
+    --window-border-radius: 0.2rem;
+    --window-bg-color: #ffffff;
+    --window-bg-dark-color: #2f0f25;
+
+    --window-content-margin: 1rem;
+
+    --window-handler-lsize: 0.4rem;
+    --window-handler-color: rgba(100, 100, 100, 0.25);
+}
+
+body {
+    background-image: var(--background-image);
+    background-size: cover;
+    height: 100vh;
+}
+
+.window {
+    border: solid 1px black; 
+    border-radius: var(--window-border-radius);
+    position: absolute;
+    width: fit-content;
+    background-color: var(--window-handler-color);
+}
+
+.window-top-bar {
+    backdrop-filter: blur(10px);
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    border-radius: var(--window-border-radius) var(--window-border-radius) 0 0;
+}
+
+.window-content {
+    position: relative;
+    border-radius: var(--window-border-radius);
+    background-color: var(--window-bg-color);
+    margin: var(--window-handler-lsize);
+    padding: var(--window-content-margin);
+}
+
+img {
+    object-fit: cover;
+    border-radius: var(--window-border-radius);
+}
+
+.small-image {
+    height: 40vh;
+    width: clamp(300px, 20vw, 1400px);
+}
+
+.centered {
+    position: relative;
+    left: 50%;
+    translate: -50% 0%;
+}
