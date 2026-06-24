@@ -36,6 +36,14 @@ body {
     border-radius: var(--window-border-radius) var(--window-border-radius) 0 0;
 }
 
+.grab {
+    cursor: grab;
+}
+
+.grabbing {
+    cursor: grabbing;
+}
+
 .window-content {
     position: relative;
     border-radius: var(--window-border-radius);

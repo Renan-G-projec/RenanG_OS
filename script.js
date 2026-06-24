@@ -28,3 +28,54 @@ function initClock() {
 }
 
 initClock();
+
+
+function dragElement(element) {
+    var initialX = 0;
+    var initialY = 0;
+    var currentX = 0;
+    var currentY = 0;
+    
+    let handler;
+
+    if (handler = document.getElementById(element.id + "-header")) {
+        document.getElementById(element.id + "-header").onmousedown = startDragging;
+    } else {
+        handler = element;
+        element.onmousedown = startDragging;
+    }
+    
+    function startDragging(e) {
+        e = e || window.event;
+        e.preventDefault();
+        initialX = e.clientX;
+        initialY = e.clientY;
+
+        handler.classList.add("grabbing");
+        handler.classList.remove("grab");
+
+        document.onmouseup = stopDragging;
+        document.onmousemove = dragElement;
+    }
+    
+    function dragElement(e) {
+        e = e || window.event;
+        e.preventDefault();
+        currentX = initialX - e.clientX;
+        currentY = initialY - e.clientY;
+        initialX = e.clientX;
+        initialY = e.clientY;
+
+        element.style.top = (element.offsetTop - currentY) + "px";
+        element.style.left = (element.offsetLeft - currentX) + "px";
+    }
+    
+    function stopDragging() {
+        handler.classList.add('grab');
+        handler.classList.remove('grabbing');
+        document.onmouseup = null;
+        document.onmousemove = null;
+    }
+}
+
+dragElement(document.getElementById("window-welcome"));
