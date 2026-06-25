@@ -105,5 +105,6 @@ function makeWindow(id, launcherId) {
     launcher.addEventListener('click', () => {openWindow(window)});
 }
 
-makeWindow("window-welcome")
-makeWindow("window-hacker-notes", "window-hacker-notes-launcher")
+makeWindow("window-welcome");
+makeWindow("window-hacker-notes", "window-hacker-notes-launcher");
+makeWindow("window-stardance", "window-stardance-launcher");
