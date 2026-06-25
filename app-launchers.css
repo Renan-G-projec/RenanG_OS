@@ -1,0 +1,49 @@
+/* Ad Maiorem Dei Gloriam! */
+
+:root {
+    --launcher-size: 7rem;
+
+    --launcher-hover-color: rgba(12, 69, 167, 0.557);
+    --launcher-hover-darker-color: rgba(12, 69, 167, 0.7);
+
+    --launcher-border-radius: 0.3rem;
+}
+
+.app-launcher-container {
+    position: absolute;
+    top: 5rem;
+    left: 2rem;
+
+    width: var(--launcher-size);
+    
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.app-launcher {
+    align-self: center;
+    align-content: center;
+
+    text-align: center;
+    height: var(--launcher-size);
+
+    border-radius: var(--launcher-border-radius);
+    cursor: pointer;
+}
+
+.app-launcher:hover {
+    background-color: var(--launcher-hover-color);
+    border: solid -2px var(--launcher-hover-darker-color);
+}
+
+.app-launcher p {
+    margin: 0;
+    color: white;
+    word-break: break-all;
+}
+
+.app-launcher img {
+    width: calc(var(--launcher-size) - 3rem);
+    object-fit: cover;
+}
