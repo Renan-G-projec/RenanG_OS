@@ -102,3 +102,4 @@ function makeWindow(id, launcherId) {
 }
 
 makeWindow("window-welcome")
+makeWindow("window-hacker-notes", "window-hacker-notes-launcher")
