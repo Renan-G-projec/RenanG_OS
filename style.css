@@ -1,4 +1,6 @@
 /* Ad Maiorem Dei Gloriam! */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&display=swap');
 
 :root {
     --background-image: url(./assets/default-bg.jpg);
@@ -18,6 +20,23 @@ body {
     background-size: cover;
     height: 100vh;
     overflow: hidden;
+
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+}
+
+p {
+    margin: 0;
+}
+
+.window-name {
+    margin: 1rem;
+    color: white;
+
+    font-family: "Google Sans Code", monospace;
+    font-optical-sizing: auto;
+    font-style: bold;
+    font-weight: 400;
 }
 
 .window {
