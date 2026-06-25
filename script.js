@@ -2,6 +2,7 @@
 
 const dateLog = document.getElementById("date-log")
 
+let biggestZ = 1;
 function initClock() {
     const getFormatedDate = (date) => {
         return `${date.toLocaleString('en-US', {
@@ -50,6 +51,9 @@ function dragElement(element) {
         e.preventDefault();
         initialX = e.clientX;
         initialY = e.clientY;
+
+        biggestZ++;
+        element.style.zIndex = biggestZ;
 
         handler.classList.add("grabbing");
         handler.classList.remove("grab");
