@@ -60,9 +60,9 @@ function deleteBg() {
     changeToDefaultBg();
 }
 
-file.addEventListener("change", () => {
-    previewBackground();
-})
+//file.addEventListener("change", () => {
+//    previewBackground();
+//})
 
 uploadButton.addEventListener("click", () => {
     changeBackground();
