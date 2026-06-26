@@ -108,3 +108,4 @@ function makeWindow(id, launcherId) {
 makeWindow("window-welcome");
 makeWindow("window-hacker-notes", "window-hacker-notes-launcher");
 makeWindow("window-stardance", "window-stardance-launcher");
+makeWindow("window-background", "window-background-launcher")

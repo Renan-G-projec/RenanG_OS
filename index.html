@@ -22,6 +22,11 @@
             <img src="assets/star.svg" alt="Hacker Notes">
             <p>Stardance</p>
         </div>
+        <div class="app-launcher" id="window-background-launcher">
+            <img src="assets/star.svg" alt="Choose background">
+            <p>Change background</p>
+        </div>
+
     </div>
 
     <div id="window-welcome" class="window">
@@ -87,6 +92,21 @@
             <p>Stardance is the 2026 summer event of Hack Club. So it runs until 30th september.</p>
             <p>If you're interest, visit the <a href="https://stardance.space/r-7r2sk">Stardance homepage!</a></p>
             <img src="./assets/stardanceLogo.avif" alt="Stardance Logo" class="centered" style="width: 30vw; background-color: rgb(65, 2, 65); margin-top: 1rem; padding: 1rem;">
+        </div>
+    </div>
+
+    <div id="window-background" class="window" style="display: none;">
+        <div id="window-background-header" class="window-top-bar grab">
+            <p class="window-name">RenanG_OS</p>
+            <span class="window-close-btn" id="window-background-close-btn"></span>
+        </div>
+        <div class="window-content">
+            <h2>Upload a file to the background!</h2>
+            <div class="file-input-container">
+                <input type="file"id="background-image-file-input"> <button id="background-image-file-button">Upload file</button>
+            </div>
+
+            <img id="current-background-image-display">
         </div>
     </div>
 
