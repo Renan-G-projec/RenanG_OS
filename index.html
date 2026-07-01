@@ -13,103 +13,106 @@
         <p id="date-log">06/23/2026 9:50 PM</p>
     </div>
 
-    <div class="app-launcher-container">
-        <div class="app-launcher" id="window-hacker-notes-launcher">
-            <img src="assets/notes.svg" alt="Hacker Notes">
-            <p>Hacker Notes</p>
-        </div>
-        <div class="app-launcher" id="window-stardance-launcher">
-            <img src="assets/star.svg" alt="Hacker Notes">
-            <p>Stardance</p>
-        </div>
-        <div class="app-launcher" id="window-background-launcher">
-            <img src="assets/star.svg" alt="Choose background">
-            <p>Change background</p>
-        </div>
-
-    </div>
-
-    <div id="window-welcome" class="window">
-        <div id="window-welcome-header" class="window-top-bar grab">
-            <p class="window-name">RenanG_OS</p>
-            <span class="window-close-btn" id="window-welcome-close-btn"></span>
-        </div>
-        <div class="window-content">
-            <h1>Welcome to RenanG_OS</h1>
-            <h2>Introduction</h2>
-            <p>Hey! Welcome to my web-based operating system (a.k.a my portfolio!)</p>
-            <p>For a really short intro, my name is Renan, from Brazil, i'm 15yo and i love coding.</p>
-            <p>You can try sliding the window or simply opening new ones. Feel free to explore!</p>
-            <p>ps: I love coffe.</p>
-            <img  class="centered small-image" src="./assets/coffe.jpg" alt="coffe">
-        </div>
-    </div>
-
-    <div id="window-hacker-notes" class="window" style="display: none;">
-        <div id="window-hacker-notes-header" class="window-top-bar grab">
-            <p class="window-name">Hacker Notes</p>
-            <span class="window-close-btn" id="window-hacker-notes-close-btn"></span>
-        </div>
-        <div class="window-content">
-            <h2>Hacker Notes</h2>
-            <p>Welcome to my hacker notes!</p>
-
-            <h3>Sooo, who am i?</h3>
-            <p>I'm Renan and i live on the south of Brazil.</p>
-            <p>I've always loved undestanding how things work by under the surface.</p>
-            <p>My mom always tell me that i broke every one of my toys when a child just to see how it work.</p>
-            <p>My first fall in love with coding was at 10 years old. But at the time, i just learned a little of Javascript and stopped.</p>
-            <p>And, for like 4 years after that, i've been periodically coming back and forgetting of coding.</p>
-            <p>I just started my coding journey seriouslly when i was 14. I made a reaaallyt crap game in raylib. You can see the awful code <a href="https://github.com/Renan-G-projec/CoguRVRP">here</a></p>
-
-            <h3>What tech do i use?</h3>
-            <p>I love using <strong>Javascript</strong>! I want to learn Typescript soon.</p>
-            <p>Also, i love Gamedev. My special game engine is <strong>GameMaker</strong>.</p>
-            <p>I love using <strong>C</strong> and <strong>C++</strong> too.</p>
-
-            <h3>My Projects!!</h3>
-            <p>My special fault is to not have enough projects shipped. In fact, i always start but never finish!</p>
-            <p><a href="https://github.com/Renan-G-projec/ScopeCutter">Scope Cutter</a>: A tool for making and shipping small projects. Essentially an MVP</p>
-            <p><a href="https://github.com/Renan-G-projec/WebLinuxTerminal">WebLinuxTerminal</a>: A tool to help begginers understanding Unix-based commands.</p>
-            <p><a href="https://github.com/Renan-G-projec/Organizer">Organizer</a>: A small script that separates files by metadata.</p>
-
-            <h3>Contact Me!</h3>
-            <p>My github: Renan-G-projec - <a href="https://github.com/Renan-G-projec">link</a></p>
-            <p>My e-mail: renanfartes@gmail.com - <a href="mailto:renanfartes@gmail.com">mail me!</a></p>
-        </div>
-    </div>
-
-    <div id="window-stardance" class="window" style="display: none;">
-        <div id="window-stardance-header" class="window-top-bar grab">
-            <p class="window-name">RenanG_OS</p>
-            <span class="window-close-btn" id="window-stardance-close-btn"></span>
-        </div>
-        <div class="window-content">
-            <h2>Soo, what is stardance?</h2>
-            <p>Stardance is a project from <a href="">Hack club.</a></p>
-            <p>Hack club is designed for teens between 13-18 years. You build projects and earn real prizes.</p>
-            <p>Yes, there's a lot of nice prizes and is an reality!</p>
-            <p>Stardance is the 2026 summer event of Hack Club. So it runs until 30th september.</p>
-            <p>If you're interest, visit the <a href="https://stardance.space/r-7r2sk">Stardance homepage!</a></p>
-            <img src="./assets/stardanceLogo.avif" alt="Stardance Logo" class="centered" style="width: 30vw; background-color: rgb(65, 2, 65); margin-top: 1rem; padding: 1rem;">
-        </div>
-    </div>
-
-    <div id="window-background" class="window" style="display: none;">
-        <div id="window-background-header" class="window-top-bar grab">
-            <p class="window-name">RenanG_OS</p>
-            <span class="window-close-btn" id="window-background-close-btn"></span>
-        </div>
-        <div class="window-content">
-            <h2>Upload a file to the background!</h2>
-            <div class="file-input-container">
-                <input type="file"id="background-image-file-input" accept="image/*"> <button id="background-image-file-button">Upload file</button> <button id="restore-default-background-button">Restore default</button>
+    <div class="os-viewport">
+        <div class="app-launcher-container">
+            <div class="app-launcher" id="window-hacker-notes-launcher">
+                <img src="assets/notes.svg" alt="Hacker Notes">
+                <p>Hacker Notes</p>
             </div>
-
-            <img id="preview-background-display">
+            <div class="app-launcher" id="window-stardance-launcher">
+                <img src="assets/star.svg" alt="Hacker Notes">
+                <p>Stardance</p>
+            </div>
+            <div class="app-launcher" id="window-background-launcher">
+                <img src="assets/star.svg" alt="Choose background">
+                <p>Change background</p>
+            </div>
+            
+        </div>
+        
+        <div id="window-welcome" class="window">
+            <div id="window-welcome-header" class="window-top-bar grab">
+                <p class="window-name">RenanG_OS</p>
+                <span class="window-close-btn" id="window-welcome-close-btn"></span>
+            </div>
+            <div class="window-content">
+                <h1>Welcome to RenanG_OS</h1>
+                <h2>Introduction</h2>
+                <p>Hey! Welcome to my web-based operating system (a.k.a my portfolio!)</p>
+                <p>For a really short intro, my name is Renan, from Brazil, i'm 15yo and i love coding.</p>
+                <p>You can try sliding the window or simply opening new ones. Feel free to explore!</p>
+                <p>ps: I love coffe.</p>
+                <img  class="centered small-image" src="./assets/coffe.jpg" alt="coffe">
+            </div>
+        </div>
+        
+        <div id="window-hacker-notes" class="window" style="display: none;">
+            <div id="window-hacker-notes-header" class="window-top-bar grab">
+                <p class="window-name">Hacker Notes</p>
+                <span class="window-close-btn" id="window-hacker-notes-close-btn"></span>
+            </div>
+            <div class="window-content">
+                <h2>Hacker Notes</h2>
+                <p>Welcome to my hacker notes!</p>
+                
+                <h3>Sooo, who am i?</h3>
+                <p>I'm Renan and i live on the south of Brazil.</p>
+                <p>I've always loved undestanding how things work by under the surface.</p>
+                <p>My mom always tell me that i broke every one of my toys when a child just to see how it work.</p>
+                <p>My first fall in love with coding was at 10 years old. But at the time, i just learned a little of Javascript and stopped.</p>
+                <p>And, for like 4 years after that, i've been periodically coming back and forgetting of coding.</p>
+                <p>I just started my coding journey seriouslly when i was 14. I made a reaaallyt crap game in raylib. You can see the awful code <a href="https://github.com/Renan-G-projec/CoguRVRP">here</a></p>
+                
+                <h3>What tech do i use?</h3>
+                <p>I love using <strong>Javascript</strong>! I want to learn Typescript soon.</p>
+                <p>Also, i love Gamedev. My special game engine is <strong>GameMaker</strong>.</p>
+                <p>I love using <strong>C</strong> and <strong>C++</strong> too.</p>
+                
+                <h3>My Projects!!</h3>
+                <p>My special fault is to not have enough projects shipped. In fact, i always start but never finish!</p>
+                <p><a href="https://github.com/Renan-G-projec/ScopeCutter">Scope Cutter</a>: A tool for making and shipping small projects. Essentially an MVP</p>
+                <p><a href="https://github.com/Renan-G-projec/WebLinuxTerminal">WebLinuxTerminal</a>: A tool to help begginers understanding Unix-based commands.</p>
+                <p><a href="https://github.com/Renan-G-projec/Organizer">Organizer</a>: A small script that separates files by metadata.</p>
+                
+                <h3>Contact Me!</h3>
+                <p>My github: Renan-G-projec - <a href="https://github.com/Renan-G-projec">link</a></p>
+                <p>My e-mail: renanfartes@gmail.com - <a href="mailto:renanfartes@gmail.com">mail me!</a></p>
+            </div>
+        </div>
+        
+        <div id="window-stardance" class="window" style="display: none;">
+            <div id="window-stardance-header" class="window-top-bar grab">
+                <p class="window-name">RenanG_OS</p>
+                <span class="window-close-btn" id="window-stardance-close-btn"></span>
+            </div>
+            <div class="window-content">
+                <h2>Soo, what is stardance?</h2>
+                <p>Stardance is a project from <a href="">Hack club.</a></p>
+                <p>Hack club is designed for teens between 13-18 years. You build projects and earn real prizes.</p>
+                <p>Yes, there's a lot of nice prizes and is an reality!</p>
+                <p>Stardance is the 2026 summer event of Hack Club. So it runs until 30th september.</p>
+                <p>If you're interest, visit the <a href="https://stardance.space/r-7r2sk">Stardance homepage!</a></p>
+                <img src="./assets/stardanceLogo.avif" alt="Stardance Logo" class="centered" style="width: 30vw; background-color: rgb(65, 2, 65); margin-top: 1rem; padding: 1rem;">
+            </div>
+        </div>
+        
+        <div id="window-background" class="window" style="display: none;">
+            <div id="window-background-header" class="window-top-bar grab">
+                <p class="window-name">RenanG_OS</p>
+                <span class="window-close-btn" id="window-background-close-btn"></span>
+            </div>
+            <div class="window-content">
+                <h2>Upload a file to the background!</h2>
+                <div class="file-input-container">
+                    <input type="file"id="background-image-file-input" accept="image/*"> <button id="background-image-file-button">Upload file</button> <button id="restore-default-background-button">Restore default</button>
+                </div>
+                
+                <img id="preview-background-display">
+            </div>
         </div>
     </div>
-
+        
     <script src="./background.js"></script>
     <script src="./script.js"></script>
+</body>
 </html>

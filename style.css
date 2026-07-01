@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&display=swap');
 
 :root {
+    --os-top-bar-height: 4rem;
     --background-image: url(./assets/default-bg.jpg);
 
     --window-border-radius: 0.2rem;
@@ -118,7 +119,7 @@ img {
     left: 0;
 
     width: 100%;
-    height: 4rem;
+    height: var(--os-top-bar-height);
 
     background-color: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(4px);
@@ -130,4 +131,9 @@ img {
     color: white;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-style: bold;
+}
+
+.os-viewport {
+    margin-top: var(--os-top-bar-height);
+    position: relative;
 }
